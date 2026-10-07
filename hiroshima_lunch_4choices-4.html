@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>今日のランチ候補 4選</title>
+<style>
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans",
+                 "Yu Gothic", "Meiryo", sans-serif;
+    background: #f4f5f7;
+    color: #1f2937;
+  }
+  .wrap {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 26px;
+  }
+  .hero {
+    text-align: center;
+    padding: 6px 8px 20px;
+  }
+  h1 {
+    font-size: clamp(32px, 4vw, 52px);
+    margin: 0 0 8px;
+    letter-spacing: .02em;
+  }
+  .sub {
+    font-size: clamp(18px, 2vw, 25px);
+    color: #6b7280;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+  }
+  .card {
+    display: block;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.09);
+    border: 1px solid #e5e7eb;
+    text-decoration: none;
+    color: inherit;
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .card:active {
+    transform: scale(.99);
+  }
+  .photo-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #e5e7eb;
+    overflow: hidden;
+  }
+  .photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .badge {
+    position: absolute;
+    left: 16px;
+    top: 16px;
+    padding: 8px 13px;
+    border-radius: 999px;
+    font-weight: 800;
+    font-size: 17px;
+    background: rgba(17,24,39,.88);
+    color: #fff;
+    backdrop-filter: blur(5px);
+  }
+  .body {
+    padding: 20px 22px 22px;
+  }
+  .name {
+    font-size: clamp(27px, 3vw, 38px);
+    font-weight: 850;
+    line-height: 1.2;
+    margin-bottom: 10px;
+  }
+  .genre {
+    display: inline-block;
+    font-size: 17px;
+    font-weight: 750;
+    background: #f3f4f6;
+    color: #374151;
+    padding: 7px 12px;
+    border-radius: 999px;
+    margin-bottom: 13px;
+  }
+  .desc {
+    font-size: clamp(17px, 1.9vw, 23px);
+    line-height: 1.55;
+    margin: 0 0 16px;
+  }
+  .tap {
+    font-size: 18px;
+    font-weight: 800;
+    color: #111827;
+    border-top: 1px solid #e5e7eb;
+    padding-top: 14px;
+  }
+  .question {
+    margin-top: 26px;
+    background: #fff7ed;
+    border: 2px solid #fed7aa;
+    border-radius: 22px;
+    padding: 22px;
+    text-align: center;
+    font-size: clamp(23px, 2.6vw, 34px);
+    font-weight: 850;
+  }
+  .note {
+    text-align: center;
+    color: #6b7280;
+    font-size: 14px;
+    margin: 18px 0 4px;
+  }
+  @media (max-width: 760px) {
+    .wrap { padding: 16px; }
+    .grid { grid-template-columns: 1fr; }
+    .card { border-radius: 20px; }
+    .body { padding: 18px; }
+  }
+</style>
+</head>
+<body>
+  <main class="wrap">
+    <header class="hero">
+      <h1>🍴 今日のランチ候補 4選</h1>
+      <div class="sub">写真を見て、気になるお店をタップしてください</div>
+    </header>
+
+    <section class="grid">
+      <a class="card" href="https://hiroshima-kikkawa.com/" target="_blank" rel="noopener">
+        <div class="photo-wrap">
+          <img class="photo"
+               src="https://tblg.k-img.com/restaurant/images/Rvw/292945/640x640_rect_fab2434dbc60da6866df61ce41690f33.jpg"
+               alt="二代目 きっ川の雰囲気写真"
+               loading="eager">
+          <div class="badge">候補 ①</div>
+        </div>
+        <div class="body">
+          <div class="name">二代目 きっ川</div>
+          <div class="genre">🐟 和食・旬魚</div>
+          <p class="desc">旬の魚・刺身・和食。落ち着いた地元の日本料理店で、ゆっくり食べたい方に。</p>
+          <div class="tap">詳細を見る →</div>
+        </div>
+      </a>
+
+      <a class="card" href="https://okonomiyaki-hirano.ecnet.jp/wordpress/shop_infomation/" target="_blank" rel="noopener">
+        <div class="photo-wrap">
+          <img class="photo"
+               src="https://cdn.4travel.jp/img/thumbnails/imk/tips_pict/18/62/91/650x450_18629158.jpg?updated_at=1652272685"
+               alt="お好み焼き ひらのの店構え"
+               loading="eager">
+          <div class="badge">候補 ②</div>
+        </div>
+        <div class="body">
+          <div class="name">お好み焼き ひらの</div>
+          <div class="genre">🥢 地元のお好み焼き</div>
+          <p class="desc">1989年創業。名物は“そばライス”。地元で長く愛される、広島らしい一軒。</p>
+          <div class="tap">詳細を見る →</div>
+        </div>
+      </a>
+
+      <a class="card" href="https://www.minamoa-ekie.jp/shop/?id=47" target="_blank" rel="noopener">
+        <div class="photo-wrap">
+          <img class="photo"
+               src="https://stat.ameba.jp/user_images/20230109/18/goriken343/62/ae/j/o1080081015227729434.jpg"
+               alt="すし辰の店内"
+               loading="eager">
+          <div class="badge">候補 ③</div>
+        </div>
+        <div class="body">
+          <div class="name">すし辰 ekie店</div>
+          <div class="genre">🍣 寿司・海鮮</div>
+          <p class="desc">広島ローカルの寿司店。瀬戸内の魚も楽しみやすく、広島駅直結で便利。</p>
+          <div class="tap">詳細を見る →</div>
+        </div>
+      </a>
+
+      <a class="card" href="https://www.minamoa-ekie.jp/shop/?id=28" target="_blank" rel="noopener">
+        <div class="photo-wrap">
+          <img class="photo"
+               src="https://livedoor.blogimg.jp/a_yoshie508/imgs/5/2/52d8310b.jpg"
+               alt="みっちゃん総本店の店内"
+               loading="eager">
+          <div class="badge">候補 ④</div>
+        </div>
+        <div class="body">
+          <div class="name">みっちゃん総本店</div>
+          <div class="genre">🔥 王道・広島お好み焼き</div>
+          <p class="desc">広島お好み焼きの王道。広島駅新幹線口のekie店で、アクセスも分かりやすい。</p>
+          <div class="tap">詳細を見る →</div>
+        </div>
+      </a>
+    </section>
+
+    <div class="question">今日は、どのお店にしましょうか？</div>
+    <div class="note">※写真は各店舗の雰囲気を確認するための参考画像です。カードをタップすると店舗情報を開きます。</div>
+  </main>
+</body>
+</html>
